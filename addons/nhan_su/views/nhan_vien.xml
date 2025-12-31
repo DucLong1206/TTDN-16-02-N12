@@ -9,12 +9,39 @@
                     <sheet>
                         <div class="oe_read_only" style="font-size:25px">Nhân viên</div>
                         <group col="4" string="Thông tin chung">
+                            <field name="ho_ten_dem"/>
+                            <field name="ten"/>
+                            <field name="ho_va_ten"/>
                             <field name="ma_dinh_danh"/>
                             <field name="ngay_sinh"/>
+                            <field name="tuoi"/>
+                            <field name="so_nguoi_bang_tuoi"/>
                             <field name="que_quan"/>
                             <field name="email"/>
+                            <field name="anh" widget="image"/>
                         </group>
+                        <notebook>
+                            <page string="Danh sách lịch sử công tác">
+                                <field name="lich_su_cong_tac_ids"/>
+                            </page>
+                            <page string="Danh sách chứng chỉ bằng cấp">
+                                <field name="danh_sach_chung_chi_bang_cap_ids"/>
+                            </page>
+                            <page string="Danh sách hợp đồng">
+    <field name="hop_dong_ids">
+        <tree editable="bottom">
+            <field name="so_hop_dong"/>
+            <field name="loai_hop_dong"/>
+            <field name="ngay_bat_dau"/>
+            <field name="ngay_ket_thuc"/>
+            <field name="trang_thai"/>
+        </tree>
+    </field>
+</page>
+
+                        </notebook>
                     </sheet>
+                    
                 </form>
             </field>
         </record>
@@ -25,7 +52,12 @@
             <field name="arch" type="xml">
                 <tree>
                     <field name="ma_dinh_danh"/>
+                    <field name="ho_ten_dem"/>
+                    <field name="ten"/>
+                    <field name="ho_va_ten"/>
                     <field name="ngay_sinh"/>
+                    <field name="tuoi"/>
+                    <field name="so_nguoi_bang_tuoi"/>
                     <field name="que_quan"/>
                     <field name="email"/>
                 </tree>
@@ -37,7 +69,9 @@
             <field name="arch" type="xml">
                 <search>
                     <field name="ma_dinh_danh"/>
+                    <field name="ho_va_ten"/>
                     <field name="ngay_sinh"/>
+                    <field name="tuoi"/>
                     <field name="que_quan"/>
                     <field name="email"/>
                 </search>
