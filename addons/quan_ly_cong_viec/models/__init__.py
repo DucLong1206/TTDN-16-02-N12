@@ -1,2 +1,4 @@
-from . import cong_viec
-from . import du_an_extend  # Phải có dòng này mới có tong_chi_phi
+# -*- coding: utf-8 -*-
+
+from . import cong_viec,du_an,giai_doan_cong_viec,nhat_ky_cong_viec,tai_nguyen,danh_gia_nhan_vien,dashboard
+
