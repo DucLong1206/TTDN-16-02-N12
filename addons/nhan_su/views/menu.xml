@@ -49,12 +49,20 @@
             sequence="4"
             action="action_danh_sach_chung_chi_bang_cap"
         />
-        <menuitem
-    id="menu_hop_dong"
-    name="Hợp đồng"
-    parent="menu_root"
-    sequence="5"
-    action="action_hop_dong"/>
+        <menuitem 
+            name="Chấm công"
+            id="menu_cham_cong"
+            parent="menu_root"
+            sequence="5"
+            action="action_cham_cong"
+        />
+        <menuitem 
+            name="Bảng lương"
+            id="menu_bang_luong"
+            parent="menu_root"
+            sequence="6"
+            action="action_bang_luong"
+        />
 
     </data>
 </odoo>

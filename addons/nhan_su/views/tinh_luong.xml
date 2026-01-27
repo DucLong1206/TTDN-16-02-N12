@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+        <!-- FORM VIEW -->
+        <record id="view_bang_luong_form" model="ir.ui.view">
+            <field name="name">bang_luong.form</field>
+            <field name="model">bang_luong</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4">
+                            <field name="nhan_vien_id"/>
+                            <field name="thang"/>
+                            <field name="luong_co_ban"/>
+                            <field name="so_cong" readonly="1"/>
+                            <field name="tong_luong" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- TREE VIEW -->
+        <record id="view_bang_luong_tree" model="ir.ui.view">
+            <field name="name">bang_luong.tree</field>
+            <field name="model">bang_luong</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nhan_vien_id"/>
+                    <field name="thang"/>
+                    <field name="so_cong"/>
+                    <field name="tong_luong"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- ACTION -->
+        <record id="action_bang_luong" model="ir.actions.act_window">
+            <field name="name">Bảng lương</field>
+            <field name="res_model">bang_luong</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

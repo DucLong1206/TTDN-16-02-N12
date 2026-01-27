@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <menuitem id="menu_root_cong_viec" name="Quản lý Công việc" sequence="11"/>
+
+        <menuitem id="menu_cong_viec_main" 
+                  name="Tất cả Công việc" 
+                  parent="menu_root_cong_viec" 
+                  action="action_quan_ly_cong_viec" 
+                  sequence="1"/>
+    </data>
+</odoo>

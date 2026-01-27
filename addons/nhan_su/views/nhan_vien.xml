@@ -27,17 +27,27 @@
                             <page string="Danh sách chứng chỉ bằng cấp">
                                 <field name="danh_sach_chung_chi_bang_cap_ids"/>
                             </page>
-                            <page string="Danh sách hợp đồng">
-    <field name="hop_dong_ids">
-        <tree editable="bottom">
-            <field name="so_hop_dong"/>
-            <field name="loai_hop_dong"/>
-            <field name="ngay_bat_dau"/>
-            <field name="ngay_ket_thuc"/>
-            <field name="trang_thai"/>
-        </tree>
-    </field>
-</page>
+                            <page string="Chấm công">
+                                <field name="cham_cong_ids">
+                                    <tree editable="bottom">
+                                        <field name="ngay"/>
+                                        <field name="trang_thai"/>
+                                        <field name="gio_vao"/>
+                                        <field name="gio_ra"/>
+                                        <field name="so_gio_lam" readonly="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                            <page string="Bảng lương">
+                                <field name="bang_luong_ids">
+                                    <tree>
+                                        <field name="thang"/>
+                                        <field name="so_cong"/>
+                                        <field name="tong_luong"/>
+                                    </tree>
+                                </field>
+                            </page>
 
                         </notebook>
                     </sheet>

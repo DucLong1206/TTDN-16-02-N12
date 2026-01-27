@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [
@@ -28,10 +28,11 @@
         'views/chuc_vu.xml',
         'views/don_vi.xml',
         'views/nhan_vien.xml',
-        'views/hop_dong.xml', 
         'views/lich_su_cong_tac.xml',
         'views/chung_chi_bang_cap.xml',
         'views/danh_sach_chung_chi_bang_cap.xml',
+        'views/cham_cong.xml',
+        'views/tinh_luong.xml',
         'views/menu.xml',
     ],
     # only loaded in demonstration mode

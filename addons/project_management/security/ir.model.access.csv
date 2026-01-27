@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_projects,projects.projects,model_projects,base.group_user,1,1,1,1
+access_employees,employees.employees,model_employees,base.group_user,1,1,1,1
+access_taskss,taskss.taskss,model_taskss,base.group_user,1,1,1,1
+access_budgets,budgets.budgets,model_budgets,base.group_user,1,1,1,1
+access_expenses,expenses.expenses,model_expenses,base.group_user,1,1,1,1

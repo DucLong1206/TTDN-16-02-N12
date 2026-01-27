@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_tien_do_du_an_chart" model="ir.ui.view">
+            <field name="name">tien_do_du_an_chart</field>
+            <field name="model">projects</field>
+            <field name="arch" type="xml">
+                <graph string="Biểu Đồ Tiến Độ Dự Án" type="bar">
+                    <field name="projects_id" type="dimension"/>
+                    <field name="progress" type="measure"/>
+                </graph>
+            </field>
+        </record>
+        <record id="action_bieu_do_du_an" model="ir.actions.act_window">
+            <field name="name">Biểu Đồ Dự Án</field>
+            <field name="res_model">projects</field>
+            <field name="view_mode">graph</field>
+        </record>
+    </data>
+</odoo>
