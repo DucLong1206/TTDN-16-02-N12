@@ -1,6 +1,5 @@
 from odoo import models, fields, api
 from datetime import date
-
 from odoo.exceptions import ValidationError
 
 class NhanVien(models.Model):
@@ -14,6 +13,14 @@ class NhanVien(models.Model):
     ho_ten_dem = fields.Char("Họ tên đệm", required=True)
     ten = fields.Char("Tên", required=True)
     ho_va_ten = fields.Char("Họ và tên", compute="_compute_ho_va_ten", store=True)
+    
+    # ======= THÊM FIELD NÀY ========
+    user_id = fields.Many2one(
+        'res.users',
+        string='User liên kết',
+        help='User Odoo liên kết với nhân viên này'
+    )
+    # ================================
     
     ngay_sinh = fields.Date("Ngày sinh")
     que_quan = fields.Char("Quê quán")
@@ -34,9 +41,9 @@ class NhanVien(models.Model):
                                         store=True
                                         )
     cham_cong_ids = fields.One2many(
-    'cham_cong',
-    'nhan_vien_id',
-    string="Chấm công"
+        'cham_cong',
+        'nhan_vien_id',
+        string="Chấm công"
     )
 
     bang_luong_ids = fields.One2many(
@@ -57,6 +64,7 @@ class NhanVien(models.Model):
                     ]
                 )
                 record.so_nguoi_bang_tuoi = len(records)
+    
     _sql_constrains = [
         ('ma_dinh_danh_unique', 'unique(ma_dinh_danh)', 'Mã định danh phải là duy nhất')
     ]
@@ -67,9 +75,6 @@ class NhanVien(models.Model):
             if record.ho_ten_dem and record.ten:
                 record.ho_va_ten = record.ho_ten_dem + ' ' + record.ten
     
-    
-    
-                
     @api.onchange("ten", "ho_ten_dem")
     def _default_ma_dinh_danh(self):
         for record in self:

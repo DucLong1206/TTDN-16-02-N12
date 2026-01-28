@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Tree View -->
+        <record id="view_loai_cong_viec_tree" model="ir.ui.view">
+            <field name="name">ql.loai_cong_viec.tree</field>
+            <field name="model">ql.loai_cong_viec</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="ma_loai"/>
+                    <field name="ten_loai"/>
+                    <field name="so_cong_viec"/>
+                    <field name="mo_ta"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form View -->
+        <record id="view_loai_cong_viec_form" model="ir.ui.view">
+            <field name="name">ql.loai_cong_viec.form</field>
+            <field name="model">ql.loai_cong_viec</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="ma_loai"/>
+                                <field name="ten_loai"/>
+                            </group>
+                            <group>
+                                <field name="mau_sac" widget="color"/>
+                                <field name="so_cong_viec"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="mo_ta" placeholder="Mô tả loại công việc..."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_loai_cong_viec" model="ir.actions.act_window">
+            <field name="name">Loại công việc</field>
+            <field name="res_model">ql.loai_cong_viec</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

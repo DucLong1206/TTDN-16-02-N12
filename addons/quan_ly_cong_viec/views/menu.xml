@@ -1,59 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Menu gốc -->
-        <menuitem
-            id="menu_root_duan"
-            name="Quản Lý Công Việc"
-            sequence="0"/>
-
-        <menuitem
-            id="menu_du_an"
-            name="Dự Án"
-            parent="menu_root_duan"
-            sequence="2"
-            action="action_du_an"/>
-
-        <menuitem
-            id="menu_giai_doan_cong_viec"
-            name="Giai Đoạn Làm Việc"
-            parent="menu_root_duan"
-            sequence="7"
-            action="action_giai_doan_cong_viec"/>
-
-        <menuitem
-            id="menu_cong_viec"
-            name="Công Việc"
-            parent="menu_root_duan"
-            sequence="4"
-            action="action_cong_viec"/>
-
-        <menuitem
-            id="menu_nhat_ky"
-            name="Nhật Ký Công Việc"
-            parent="menu_root_duan"
-            sequence="5"
-            action="action_nhat_ky"/> 
-
-        <menuitem
-            id="menu_tai_nguyen"
-            name="Tài Nguyên Dự Án"
-            parent="menu_root_duan"
-            sequence="3"
-            action="action_tai_nguyen"/> 
+        <!-- Menu Root -->
+        <menuitem 
+            id="menu_cong_viec_root" 
+            name="Quản Lý Công Việc" 
+            sequence="11"
+            web_icon="quan_ly_cong_viec,static/description/icon.png"/>
         
-        <menuitem
-            id="menu_danh_gia_nhan_vien"
-            name="Đánh Giá Nhân Viên"
-            parent="menu_root_duan"
-            sequence="6"
-            action="action_danh_gia_nhan_vien"/> 
+        <!-- Menu Group: Điều hành -->
+        <menuitem 
+            id="menu_group_dieu_hanh" 
+            name="Điều hành" 
+            parent="menu_cong_viec_root" 
+            sequence="1"/>
         
-         <menuitem
-            id="menu_dashboard"
-            name="Dashboard"
-            parent="menu_root_duan"
-            sequence="1"
-            action="action_dashboard"/>
+        <menuitem 
+            id="menu_cong_viec_all" 
+            name="Tất cả công việc" 
+            parent="menu_group_dieu_hanh" 
+            action="action_cong_viec" 
+            sequence="1"/>
+        
+        <menuitem 
+            id="menu_my_tasks" 
+            name="Công việc của tôi" 
+            parent="menu_group_dieu_hanh" 
+            action="action_my_tasks" 
+            sequence="2"/>
+        
+        <menuitem 
+            id="menu_nhat_ky" 
+            name="Nhật ký làm việc" 
+            parent="menu_group_dieu_hanh" 
+            action="action_nhat_ky_cong_viec" 
+            sequence="3"/>
+        
+        <menuitem 
+            id="menu_my_worklogs" 
+            name="Nhật ký của tôi" 
+            parent="menu_group_dieu_hanh" 
+            action="action_my_worklogs" 
+            sequence="4"/>
+        
+        <!-- Menu Group: Báo cáo -->
+        <menuitem 
+            id="menu_group_bao_cao" 
+            name="Báo cáo &amp; Phân tích" 
+            parent="menu_cong_viec_root" 
+            sequence="5"/>
+        
+        <!-- Menu Group: Cấu hình -->
+        <menuitem 
+            id="menu_group_cau_hinh" 
+            name="Cấu hình" 
+            parent="menu_cong_viec_root" 
+            sequence="10"/>
+        
+        <menuitem 
+            id="menu_loai_cong_viec" 
+            name="Loại công việc" 
+            parent="menu_group_cau_hinh" 
+            action="action_loai_cong_viec" 
+            sequence="1"/>
     </data>
 </odoo>

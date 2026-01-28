@@ -1,7 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <menuitem id="menu_root_du_an" name="Hệ thống Dự án" sequence="10"/>
-        <menuitem id="menu_du_an_main" name="Dự án" parent="menu_root_du_an" action="action_quan_ly_du_an" sequence="1"/>
+        <!-- Menu Root -->
+        <menuitem 
+            id="menu_du_an_root" 
+            name="Quản Lý Dự Án" 
+            sequence="10"
+            web_icon="quan_ly_du_an,static/description/icon.png"/>
+        
+        <!-- Menu Group: Dự án -->
+        <menuitem 
+            id="menu_group_du_an" 
+            name="Dự án" 
+            parent="menu_du_an_root" 
+            sequence="1"/>
+        
+        <menuitem 
+            id="menu_du_an_list" 
+            name="Tất cả dự án" 
+            parent="menu_group_du_an" 
+            action="action_du_an" 
+            sequence="1"/>
+        
+        <menuitem 
+            id="menu_thanh_vien_du_an" 
+            name="Thành viên dự án" 
+            parent="menu_group_du_an" 
+            action="action_thanh_vien_du_an" 
+            sequence="2"/>
     </data>
 </odoo>

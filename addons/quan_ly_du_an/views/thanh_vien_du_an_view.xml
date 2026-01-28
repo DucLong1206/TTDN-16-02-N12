@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View -->
+        <record id="view_thanh_vien_du_an_form" model="ir.ui.view">
+            <field name="name">ql.thanh_vien_du_an.form</field>
+            <field name="model">ql.thanh_vien_du_an</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_view_tasks" string="Xem công việc" 
+                                type="object" class="oe_highlight"/>
+                        <button name="action_deactivate" string="Ngừng hoạt động" 
+                                type="object"
+                                attrs="{'invisible': [('trang_thai', '=', 'inactive')]}"/>
+                        <field name="trang_thai" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="du_an_id" options="{'no_create': True}"/>
+                                <field name="nhan_vien_id" options="{'no_create': True}"/>
+                                <field name="vai_tro"/>
+                            </group>
+                            <group>
+                                <field name="ngay_tham_gia"/>
+                                <field name="ngay_ket_thuc"/>
+                                <field name="phan_tram_tham_gia"/>
+                            </group>
+                        </group>
+                        
+                        <group>
+                            <group string="Thông tin liên hệ">
+                                <field name="email"/>
+                                <field name="so_dien_thoai"/>
+                            </group>
+                            <group string="Thống kê công việc">
+                                <field name="so_cong_viec_duoc_giao"/>
+                                <field name="so_cong_viec_hoan_thanh"/>
+                                <field name="ty_le_hoan_thanh" widget="progressbar"/>
+                            </group>
+                        </group>
+                        
+                        <group>
+                            <field name="mo_ta_nhiem_vu" placeholder="Mô tả nhiệm vụ của thành viên..."/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Tree View -->
+        <record id="view_thanh_vien_du_an_tree" model="ir.ui.view">
+            <field name="name">ql.thanh_vien_du_an.tree</field>
+            <field name="model">ql.thanh_vien_du_an</field>
+            <field name="arch" type="xml">
+                <tree decoration-muted="trang_thai == 'inactive'">
+                    <field name="nhan_vien_id"/>
+                    <field name="vai_tro"/>
+                    <field name="ngay_tham_gia"/>
+                    <field name="phan_tram_tham_gia"/>
+                    <field name="so_cong_viec_duoc_giao"/>
+                    <field name="so_cong_viec_hoan_thanh"/>
+                    <field name="ty_le_hoan_thanh" widget="progressbar"/>
+                    <field name="trang_thai"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <!-- Search View -->
+        <record id="view_thanh_vien_du_an_search" model="ir.ui.view">
+            <field name="name">ql.thanh_vien_du_an.search</field>
+            <field name="model">ql.thanh_vien_du_an</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nhan_vien_id"/>
+                    <field name="du_an_id"/>
+
+                    <separator/>
+
+                    <filter string="Đang hoạt động"
+                            name="active"
+                            domain="[('trang_thai', '=', 'active')]"/>
+
+                    <filter string="Trưởng nhóm"
+                            name="leader"
+                            domain="[('vai_tro', '=', 'leader')]"/>
+
+                    <group expand="0" string="Nhóm theo">
+                        <filter string="Dự án"
+                                name="group_project"
+                                context="{'group_by': 'du_an_id'}"/>
+
+                        <filter string="Vai trò"
+                                name="group_role"
+                                context="{'group_by': 'vai_tro'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+        <!-- Action -->
+        <record id="action_thanh_vien_du_an" model="ir.actions.act_window">
+            <field name="name">Thành viên dự án</field>
+            <field name="res_model">ql.thanh_vien_du_an</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_thanh_vien_du_an_tree"/>
+            <field name="search_view_id" ref="view_thanh_vien_du_an_search"/>
+            <field name="context">
+                {
+                    'search_default_active': 1,
+                    'group_by': 'du_an_id'
+                }
+            </field>
+        </record>
+
+    </data>
+</odoo>
