@@ -265,8 +265,7 @@
                     <field name="du_an_id"/>
                     <field name="nguoi_thuc_hien_id"/>
                     <separator/>
-                    <filter string="Công việc của tôi" name="my_tasks" 
-                            domain="[('nguoi_thuc_hien_id.user_id', '=', uid)]"/>
+
                     <filter string="Cần làm" name="todo" 
                             domain="[('trang_thai', '=', 'todo')]"/>
                     <filter string="Đang làm" name="doing" 
@@ -309,16 +308,5 @@
             </field>
         </record>
 
-        <!-- Action: My Tasks -->
-        <record id="action_my_tasks" model="ir.actions.act_window">
-            <field name="name">Công việc của tôi</field>
-            <field name="res_model">ql.cong_viec</field>
-            <field name="view_mode">kanban,tree,form,calendar</field>
-            <field name="search_view_id" ref="view_cong_viec_search"/>
-            <field name="context">{
-                'search_default_my_tasks': 1,
-                'search_default_doing': 1,
-            }</field>
-        </record>
     </data>
 </odoo>

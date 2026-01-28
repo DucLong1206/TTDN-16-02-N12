@@ -23,32 +23,19 @@
             sequence="1"/>
         
         <menuitem 
-            id="menu_my_tasks" 
-            name="Công việc của tôi" 
-            parent="menu_group_dieu_hanh" 
-            action="action_my_tasks" 
-            sequence="2"/>
-        
-        <menuitem 
             id="menu_nhat_ky" 
             name="Nhật ký làm việc" 
             parent="menu_group_dieu_hanh" 
             action="action_nhat_ky_cong_viec" 
-            sequence="3"/>
-        
-        <menuitem 
-            id="menu_my_worklogs" 
-            name="Nhật ký của tôi" 
-            parent="menu_group_dieu_hanh" 
-            action="action_my_worklogs" 
-            sequence="4"/>
+            sequence="2"/>
+
         
         <!-- Menu Group: Báo cáo -->
         <menuitem 
             id="menu_group_bao_cao" 
             name="Báo cáo &amp; Phân tích" 
             parent="menu_cong_viec_root" 
-            sequence="5"/>
+            sequence="3"/>
         
         <!-- Menu Group: Cấu hình -->
         <menuitem 
