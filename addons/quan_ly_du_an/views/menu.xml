@@ -7,6 +7,13 @@
             name="Quản Lý Dự Án" 
             sequence="10"
             web_icon="quan_ly_du_an,static/description/icon.png"/>
+
+        <menuitem 
+            id="menu_dashboard_du_an" 
+            name="Dashboard" 
+            parent="menu_du_an_root" 
+            action="action_dashboard_du_an" 
+            sequence="0"/>
         
         <!-- Menu Group: Dự án -->
         <menuitem 
@@ -14,19 +21,20 @@
             name="Dự án" 
             parent="menu_du_an_root" 
             sequence="1"/>
+
         
         <menuitem 
             id="menu_du_an_list" 
             name="Tất cả dự án" 
             parent="menu_group_du_an" 
             action="action_du_an" 
-            sequence="1"/>
+            sequence="2"/>
         
         <menuitem 
             id="menu_thanh_vien_du_an" 
             name="Thành viên dự án" 
             parent="menu_group_du_an" 
             action="action_thanh_vien_du_an" 
-            sequence="2"/>
+            sequence="3"/>
     </data>
 </odoo>

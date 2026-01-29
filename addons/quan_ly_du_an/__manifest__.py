@@ -19,6 +19,7 @@
         'security/ir.model.access.csv',
         'views/du_an_view.xml',
         'views/thanh_vien_du_an_view.xml',
+        'views/dashboard_view.xml',
         'views/menu.xml',
     ],
     'application': True,

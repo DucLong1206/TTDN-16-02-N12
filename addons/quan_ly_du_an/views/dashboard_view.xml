@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Dashboard Form View -->
+        <record id="view_dashboard_du_an_form" model="ir.ui.view">
+            <field name="name">ql.dashboard.du_an.form</field>
+            <field name="model">ql.dashboard.du_an</field>
+            <field name="arch" type="xml">
+                <form string="Dashboard Quản lý Dự án" create="false" edit="false" delete="false">
+                    <sheet>
+                        <div class="oe_dashboard_header" style="margin-bottom: 20px;">
+                            <h1 style="color: #1a1a1a; font-weight: 700; margin: 0;">
+                                📊 Dashboard Quản lý Dự án
+                            </h1>
+                            <p style="color: #666; margin-top: 5px;">Tổng quan về dự án và công việc</p>
+                        </div>
+
+                        <!-- Stats Cards Row 1 -->
+                        <group>
+                            <group colspan="4" col="4">
+                                <!-- Card 1: Tổng dự án -->
+                                <div class="oe_dashboard_card" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3); margin: 5px;">
+                                    <div style="color: white;">
+                                        <div style="font-size: 14px; opacity: 0.9; margin-bottom: 5px;">Tổng số dự án</div>
+                                        <div style="font-size: 36px; font-weight: 700;">
+                                            <field name="tong_so_du_an" readonly="1" nolabel="1"/>
+                                        </div>
+                                        <div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">
+                                            Đang thực hiện: <field name="du_an_dang_thuc_hien" readonly="1" nolabel="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 2: Tổng công việc -->
+                                <div class="oe_dashboard_card" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(245, 87, 108, 0.3); margin: 5px;">
+                                    <div style="color: white;">
+                                        <div style="font-size: 14px; opacity: 0.9; margin-bottom: 5px;">Tổng số công việc</div>
+                                        <div style="font-size: 36px; font-weight: 700;">
+                                            <field name="tong_so_cong_viec" readonly="1" nolabel="1"/>
+                                        </div>
+                                        <div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">
+                                            Đang làm: <field name="cong_viec_dang_lam" readonly="1" nolabel="1"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 3: Hoàn thành -->
+                                <div class="oe_dashboard_card" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(79, 172, 254, 0.3); margin: 5px;">
+                                    <div style="color: white;">
+                                        <div style="font-size: 14px; opacity: 0.9; margin-bottom: 5px;">Công việc hoàn thành</div>
+                                        <div style="font-size: 36px; font-weight: 700;">
+                                            <field name="cong_viec_hoan_thanh" readonly="1" nolabel="1"/>
+                                        </div>
+                                        <div style="font-size: 12px; opacity: 0.8; margin-top: 5px;">
+                                            Tỷ lệ: <field name="ty_le_hoan_thanh_cong_viec" readonly="1" nolabel="1" widget="float"/>%
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Card 4: Quá hạn -->
+                                <div class="oe_dashboard_card" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); padding: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(250, 112, 154, 0.3); margin: 5px;">
+                                    <div style="color: white;">
+                                        <div style="font-size: 14px; opacity: 0.9; margin-bottom: 5px;">⚠️ Công việc quá hạn</div>
+                                        <div style="font-size: 36px; font-weight: 700;">
+                                            <field name="cong_viec_qua_han" readonly="1" nolabel="1"/>
+                                        </div>
+                                        <button name="action_view_cong_viec_overdue" 
+                                                string="Xem chi tiết" 
+                                                type="object" 
+                                                class="btn btn-link" 
+                                                style="color: white; padding: 0; margin-top: 5px; text-decoration: underline; font-size: 12px;"/>
+                                    </div>
+                                </div>
+                            </group>
+                        </group>
+
+                        <!-- Progress Bars -->
+                        <group string="📈 Tiến độ tổng quan" style="margin-top: 20px;">
+                            <group>
+                                <label for="ty_le_hoan_thanh_du_an" string="Tỷ lệ hoàn thành dự án"/>
+                                <div>
+                                    <field name="ty_le_hoan_thanh_du_an" widget="progressbar" readonly="1" nolabel="1"/>
+                                </div>
+                            </group>
+                            <group>
+                                <label for="ty_le_hoan_thanh_cong_viec" string="Tỷ lệ hoàn thành công việc"/>
+                                <div>
+                                    <field name="ty_le_hoan_thanh_cong_viec" widget="progressbar" readonly="1" nolabel="1"/>
+                                </div>
+                            </group>
+                        </group>
+
+                        <!-- Actions -->
+                        <group>
+                            <group colspan="2" col="2">
+                                <button name="action_view_du_an_running" 
+                                        string="🚀 Xem dự án đang thực hiện" 
+                                        type="object" 
+                                        class="oe_highlight"
+                                        style="margin: 5px;"/>
+                                <button name="action_view_cong_viec_overdue" 
+                                        string="⚠️ Xem công việc quá hạn" 
+                                        type="object" 
+                                        class="btn btn-warning"
+                                        style="margin: 5px;"/>
+                            </group>
+                        </group>
+
+                        <!-- Notes -->
+                        <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #667eea;">
+                            <h4 style="margin: 0 0 10px 0; color: #667eea;">💡 Ghi chú</h4>
+                            <ul style="margin: 0; padding-left: 20px; color: #666;">
+                                <li>Dashboard được cập nhật theo thời gian thực</li>
+                                <li>Click vào các số liệu để xem chi tiết</li>
+                                <li>Sử dụng các biểu đồ để phân tích xu hướng</li>
+                            </ul>
+                        </div>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Dashboard Action -->
+        <record id="action_dashboard_du_an" model="ir.actions.act_window">
+            <field name="name">Dashboard</field>
+            <field name="res_model">ql.dashboard.du_an</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+            <field name="context">{}</field>
+        </record>
+
+    </data>
+</odoo>

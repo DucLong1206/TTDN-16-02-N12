@@ -1,0 +1,98 @@
+/* Dashboard CSS cho Odoo */
+
+.oe_dashboard_header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+}
+
+.oe_dashboard_header h1 {
+    color: #1a1a1a;
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.oe_dashboard_card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.oe_dashboard_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Stats Card Styles */
+.o_form_view .oe_dashboard_card .o_field_widget {
+    font-weight: inherit;
+    color: inherit;
+}
+
+.o_form_view .oe_dashboard_card .o_field_widget input,
+.o_form_view .oe_dashboard_card .o_field_widget span {
+    background: transparent !important;
+    border: none !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    pointer-events: none;
+}
+
+/* Progress Bar Custom Style */
+.o_progressbar {
+    height: 25px !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+}
+
+.o_progressbar .o_progressbar_complete {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+}
+
+/* Button Styles */
+.o_form_view .oe_highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+}
+
+.o_form_view .oe_highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.o_form_view .btn-warning {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%) !important;
+    border: none !important;
+    color: white !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+}
+
+/* Remove default Odoo form styling for dashboard */
+.o_form_view .oe_dashboard_card .o_form_label {
+    display: none;
+}
+
+/* Chart Container */
+.o_dashboard_chart {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .oe_dashboard_card {
+        margin: 10px 0 !important;
+    }
+}

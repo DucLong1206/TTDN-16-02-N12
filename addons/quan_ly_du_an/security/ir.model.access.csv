@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_ql_du_an,ql.du_an,model_ql_du_an,base.group_user,1,1,1,1
 access_ql_thanh_vien_du_an,ql.thanh_vien_du_an,model_ql_thanh_vien_du_an,base.group_user,1,1,1,1
+access_ql_dashboard_du_an,ql.dashboard.du_an,model_ql_dashboard_du_an,base.group_user,1,1,1,1
