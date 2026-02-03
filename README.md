@@ -99,7 +99,7 @@ Quản lý nhiệm vụ chi tiết và theo dõi tiến độ.
 | ![Danh sách Công việc](./docs/img/cong_viec_tree.png) | ![Form Công việc](./docs/img/cong_viec_form.png) |
 | *Danh sách công việc với decoration* | *Chi tiết công việc với trạng thái* |
 
-| Nhật ký Công việc | Biểu đồ Ưu tiên |
+| Nhật ký Công việc |
 |:---:|:---:|
 | ![Nhật ký Công việc](./docs/img/nhat_ky_cong_viec.png) |
 | *Theo dõi nhật ký làm việc* |
