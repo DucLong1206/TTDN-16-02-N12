@@ -27,7 +27,7 @@ Platform ERP được áp dụng vào học phần Thực tập doanh nghiệp d
 ## 📄 Poster Dự án
 
 <p align="center">
-    <a href="./poster.pdf">
+    <a href="./Poster.pdf">
         <img src="https://img.shields.io/badge/📄_Xem_Poster_Dự_Án-PDF-red?style=for-the-badge&logo=adobe-acrobat-reader" alt="Poster PDF"/>
     </a>
 </p>
