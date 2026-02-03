@@ -32,7 +32,7 @@ Platform ERP được áp dụng vào học phần Thực tập doanh nghiệp d
     </a>
 </p>
 
-> 📌 **Poster** trình bày tổng quan về kiến trúc hệ thống, các phân hệ chính và tính năng nổi bật của dự án. [**Nhấn vào đây để xem Poster (PDF)**](./poster.pdf)
+> 📌 **Poster** trình bày tổng quan về kiến trúc hệ thống, các phân hệ chính và tính năng nổi bật của dự án. [**Nhấn vào đây để xem Poster (PDF)**](./Poster.pdf)
 
 ---
 
