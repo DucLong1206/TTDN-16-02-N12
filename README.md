@@ -60,27 +60,27 @@ Platform ERP được áp dụng vào học phần Thực tập doanh nghiệp d
 ### Dashboard & Thống kê
 Dashboard cung cấp cái nhìn tổng quan về dự án và công việc, với thống kê thời gian thực.
 
-| Dashboard Dự án | Top Nhân viên |
+| Dashboard Dự án | Tiến độ Tổng quan |
 |:---:|:---:|
-| ![Dashboard Dự án](./docs/screenshots/dashboard_du_an.png) | ![Top Nhân viên](./docs/screenshots/top_nhan_vien.png) |
-| *Thống kê tổng quan với card và progress bar* | *Xếp hạng nhân viên hiệu quả nhất* |
+| ![Dashboard Dự án](./docs/img/dashboard_du_an.png) | ![Tiến độ Tổng quan](./docs/img/tien_do_tong_quan.png) |
+| *Thống kê tổng quan với card và progress bar* | *Progress bar tỷ lệ hoàn thành dự án và công việc* |
 
-| Dự án Gần Hết Hạn | Thống kê Theo Tháng |
+| Công việc Quá hạn | Dự án Đang Thực hiện |
 |:---:|:---:|
-| ![Dự án Gần Hết Hạn](./docs/screenshots/du_an_gan_het_han.png) | ![Thống kê Theo Tháng](./docs/screenshots/thong_ke_theo_thang.png) |
-| *Cảnh báo dự án sắp hết hạn* | *Phân tích công việc theo tháng* |
+| ![Công việc Quá hạn](./docs/img/cong_viec_qua_han.png) | ![Dự án Đang Thực hiện](./docs/img/du_an_dang_thuc_hien.png) |
+| *Cảnh báo và button xem công việc quá hạn* | *Button xem dự án đang thực hiện* |
 
 ### Phân hệ Quản lý Dự án
 Quản lý toàn diện dự án, thành viên và tiến độ.
 
 | Danh sách Dự án | Form Dự án |
 |:---:|:---:|
-| ![Danh sách Dự án](./docs/screenshots/du_an_tree.png) | ![Form Dự án](./docs/screenshots/du_an_form.png) |
+| ![Danh sách Dự án](./docs/img/du_an_tree.png) | ![Form Dự án](./docs/img/du_an_form.png) |
 | *Danh sách dự án với trạng thái* | *Chi tiết dự án với notebook thành viên* |
 
 | Kanban Dự án | Thành viên Dự án |
 |:---:|:---:|
-| ![Kanban Dự án](./docs/screenshots/du_an_kanban.png) | ![Thành viên Dự án](./docs/screenshots/thanh_vien_du_an.png) |
+| ![Kanban Dự án](./docs/img/du_an_kanban.png) | ![Thành viên Dự án](./docs/img/thanh_vien_du_an.png) |
 | *View kanban theo trạng thái* | *Quản lý vai trò và thống kê công việc* |
 
 ### Phân hệ Nhân sự (HR)
@@ -88,26 +88,21 @@ Quản lý hồ sơ nhân sự, quá trình công tác và năng lực nhân vi�
 
 | Hồ sơ Nhân viên | Chấm Công & Lương |
 |:---:|:---:|
-| ![Nhân sự](./docs/screenshots/nhan_vien_form.png) | ![Chấm Công](./docs/screenshots/cham_cong.png) |
+| ![Nhân sự](./docs/img/nhan_vien_form.png) | ![Chấm Công](./docs/img/cham_cong.png) |
 | *Danh sách nhân sự với notebook* | *Quản lý chấm công và bảng lương* |
-
-| Lịch sử Công tác | Chứng chỉ & Bằng cấp |
-|:---:|:---:|
-| ![Lịch sử Công tác](./docs/screenshots/lich_su_cong_tac.png) | ![Chứng chỉ](./docs/screenshots/danh_sach_chung_chi.png) |
-| *Theo dõi quá trình làm việc* | *Quản lý hồ sơ năng lực* |
 
 ### Phân hệ Quản lý Công việc
 Quản lý nhiệm vụ chi tiết và theo dõi tiến độ.
 
 | Danh sách Công việc | Form Công việc |
 |:---:|:---:|
-| ![Danh sách Công việc](./docs/screenshots/cong_viec_tree.png) | ![Form Công việc](./docs/screenshots/cong_viec_form.png) |
+| ![Danh sách Công việc](./docs/img/cong_viec_tree.png) | ![Form Công việc](./docs/img/cong_viec_form.png) |
 | *Danh sách công việc với decoration* | *Chi tiết công việc với trạng thái* |
 
 | Nhật ký Công việc | Biểu đồ Ưu tiên |
 |:---:|:---:|
-| ![Nhật ký Công việc](./docs/screenshots/nhat_ky_cong_viec.png) | ![Biểu đồ Ưu tiên](./docs/screenshots/cong_viec_by_priority.png) |
-| *Theo dõi nhật ký làm việc* | *Thống kê công việc theo mức độ ưu tiên* |
+| ![Nhật ký Công việc](./docs/img/nhat_ky_cong_viec.png) |
+| *Theo dõi nhật ký làm việc* |
 
 ---
 
